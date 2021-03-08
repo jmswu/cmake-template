@@ -33,3 +33,6 @@
 
 # gtest
 googletest/
+
+# build
+build/
