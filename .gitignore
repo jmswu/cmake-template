@@ -31,8 +31,7 @@
 *.out
 *.app
 
-# gtest
+# folder
 googletest/
-
-# build
 build/
+.vscode/
