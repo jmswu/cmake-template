@@ -13,44 +13,8 @@ add_subdirectory(googletest)
 add_executable(${PROJECT_NAME} ${SRC_CXX_FILES} ${SRC_C_FILES})
 target_link_libraries(${PROJECT_NAME} pthread gtest gtest_main)
 
-set(MY_GCC_FLAGS 
-    "-Os"
-    "-Werror" 
-    "-Wall"
-    "-Wextra"
-    "-Wpointer-arith"
-    "-Wcast-align"
-    "-Wwrite-strings"
-    "-Wswitch-default" 
-    "-Wunreachable-code"
-    "-Winit-self"
-    "-Wmissing-field-initializers"
-    "-Wno-unknown-pragmas"
-    "-Wstrict-prototypes"
-    "-Wundef"
-    "-Wold-style-definition"
-    "-Wno-misleading-indentation"
-)
-
-set (MY_GXX_FLAGS
-    "-Os"
-    "-Werror"
-    "-Wall"
-    "-Wextra"
-    "-Wpointer-arith"
-    "-Wcast-align"
-    "-Wwrite-strings"
-    "-Wswitch-default"
-    "-Wunreachable-code"
-    "-Winit-self"
-    "-Wmissing-field-initializers"
-    "-Wno-unknown-pragmas"
-    "-Wundef"
-    "-Wno-misleading-indentation"
-)
-
-set(GCC_X_COVERAGE_COMPILE_FLAGS MY_GCC_FLAGS)
-set(GCC_CXX_COVERAGE_COMPILE_FLAGS MY_GXX_FLAGS)
+set(GCC_X_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Wno-misleading-indentation")
+set(GCC_CXX_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wundef -Wno-misleading-indentation")
 
 set(CMAKE_C_FLAGS ${CMAKE_CXX_FLAGS} ${GCC_X_COVERAGE_COMPILE_FLAGS})
 set(CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} ${GCC_CXX_COVERAGE_COMPILE_FLAGS})
