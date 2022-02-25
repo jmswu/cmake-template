@@ -20,11 +20,6 @@ set (TEST_SRC_FILES
         "${APP_SRC_FOLDER}/add.cpp"
     )
 
-
-
-#file(GLOB_RECURSE SRC_CXX_FILES CMAKE_CONFIGURE_DEPENDS ${SRC_FOLDER}/*.cpp)
-#file(GLOB_RECURSE SRC_C_FILES CMAKE_CONFIGURE_DEPENDS ${SRC_FOLDER}/*.c)
-
 add_subdirectory (googletest)
 
 add_executable (${PROJECT_NAME} ${APP_SRC_FILES})
