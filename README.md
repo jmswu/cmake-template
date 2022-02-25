@@ -2,6 +2,6 @@
 
 cmake template for using GTest
 
-- step 1: clone googletest from git hub to the root folder
-- step 2: put test (x.hpp & x.cpp) in [src] folder
+- step 1: clone this repo with *--recursive*
+- step 2: put test source files in [src] folder and header in [includes] folder
 - step 3: run cmake and make
