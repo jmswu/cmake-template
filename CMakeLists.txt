@@ -17,6 +17,7 @@ set (APP_SRC_FILES
 set (TEST_SRC_FOLDER unit_test)
 set (TEST_SRC_FILES 
         "${TEST_SRC_FOLDER}/add_test.cpp"
+        "${TEST_SRC_FOLDER}/another_test.cpp"
         "${APP_SRC_FOLDER}/add.cpp"
     )
 
