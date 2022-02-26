@@ -23,12 +23,14 @@ namespace
         }
     };
 
+    // testing CPP code
     TEST_F(AddTest, positiveNumber_cpp)
     {
         ASSERT_EQ(100, add(10, 90));
         ASSERT_EQ(123, add(100, 23));
     }
 
+    // testing C code
     TEST_F(AddTest, positiveNumber_c)
     {
         ASSERT_EQ(100, add_c_code(10, 90));
