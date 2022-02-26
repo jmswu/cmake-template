@@ -26,8 +26,8 @@ namespace
     // testing CPP code
     TEST_F(AddTest, positiveNumber_cpp)
     {
-        ASSERT_EQ(100, my::add(10, 90));
-        ASSERT_EQ(123, my::add(100, 23));
+        ASSERT_EQ(100, add(10, 90));
+        ASSERT_EQ(123, add(100, 23));
     }
 
     // testing C code
