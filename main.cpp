@@ -10,7 +10,7 @@ int main(int argc, char** argv)
     (void)argv;
     (void)argc;
 
-    std::printf("CXX code: 1 + 2 is %d\n\r", add(1, 2));        // CPP code
+    std::printf("CXX code: 1 + 2 is %d\n\r", my::add(1, 2));    // CPP code
     std::printf("C   code: 1 + 2 is %d\n\r", add_c_code(1, 2)); // C   code
 
     return EXIT_SUCCESS;

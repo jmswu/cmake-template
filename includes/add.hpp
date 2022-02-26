@@ -10,4 +10,7 @@
  */
 #pragma once
 
-int add(int a, int b);
+namespace my
+{
+    int add(int a, int b);
+}
