@@ -24,7 +24,7 @@ set (TEST_SRC_FILES
         "${APP_SRC_FOLDER}/add.c"
     )
 
-add_subdirectory (googletest)
+add_subdirectory (third-party/googletest)
 
 add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
