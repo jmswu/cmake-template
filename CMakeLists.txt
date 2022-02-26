@@ -21,6 +21,7 @@ set (TEST_SRC_FILES
         "${TEST_SRC_FOLDER}/add_test.cpp"
         "${TEST_SRC_FOLDER}/another_test.cpp"
         "${APP_SRC_FOLDER}/add.cpp"
+        "${APP_SRC_FOLDER}/add.c"
     )
 
 add_subdirectory (googletest)
