@@ -1,7 +1,8 @@
-cmake_minimum_required(VERSION 3.12)
+cmake_minimum_required (VERSION 3.12)
 
-project(my_poject)
-set(UNIT_TEST_NAME "test_${PROJECT_NAME}")
+project (my_poject)
+set (UNIT_TEST_NAME "test_${PROJECT_NAME}")
+set (APP_NAME "app_${PROJECT_NAME}")
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED true)
@@ -24,7 +25,7 @@ set (TEST_SRC_FILES
 
 add_subdirectory (googletest)
 
-add_executable (${PROJECT_NAME} ${APP_SRC_FILES})
+add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
 
 target_link_libraries (${UNIT_TEST_NAME} pthread gtest gtest_main)
