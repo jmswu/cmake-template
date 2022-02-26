@@ -12,6 +12,7 @@ set (APP_SRC_FOLDER src)
 set (APP_SRC_FILES 
         "main.cpp"
         "${APP_SRC_FOLDER}/add.cpp"
+        "${APP_SRC_FOLDER}/add.c"
     )
 
 set (TEST_SRC_FOLDER unit_test)
