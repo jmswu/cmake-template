@@ -34,9 +34,11 @@ if (CMAKE_CXX_CPPCHECK)
             "--inconclusive"
             "--force" 
             "--inline-suppr"
-            # "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
+            "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
     )
 endif()
+
+message("==== ${CMAKE_SOURCE_DIR}")
 
 add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
