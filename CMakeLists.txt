@@ -48,6 +48,9 @@ endif()
 #     )
 # endif()
 
+#use in clang-tidy
+set(CMAKE_EXPORT_COMPILE_COMMANDS true)
+
 add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
 
