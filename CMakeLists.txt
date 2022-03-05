@@ -38,8 +38,6 @@ if (CMAKE_CXX_CPPCHECK)
     )
 endif()
 
-message("==== ${CMAKE_SOURCE_DIR}")
-
 add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
 
