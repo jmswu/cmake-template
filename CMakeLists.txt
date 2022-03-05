@@ -38,6 +38,16 @@ if (CMAKE_CXX_CPPCHECK)
     )
 endif()
 
+# find_program(CMAKE_CXX_CLANG_TIDY NAMES clang-tidy)
+# if (CMAKE_CXX_CLANG_TIDY)
+#     list(
+#         APPEND CMAKE_CXX_CLANG_TIDY 
+#             "-header-filter=."
+#             "-checks=*"
+#             "-warnings-as-errors=*"
+#     )
+# endif()
+
 add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
 
