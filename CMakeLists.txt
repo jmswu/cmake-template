@@ -26,6 +26,18 @@ set (TEST_SRC_FILES
 
 add_subdirectory (third-party/googletest)
 
+find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
+if (CMAKE_CXX_CPPCHECK)
+    list(
+        APPEND CMAKE_CXX_CPPCHECK 
+            "--enable=warning"
+            "--inconclusive"
+            "--force" 
+            "--inline-suppr"
+            # "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
+    )
+endif()
+
 add_executable (${APP_NAME} ${APP_SRC_FILES})
 add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
 
@@ -36,3 +48,4 @@ set (GCC_CXX_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -
 
 set (CMAKE_C_FLAGS ${CMAKE_C_FLAGS} ${GCC_C_COVERAGE_COMPILE_FLAGS})
 set (CMAKE_CXX_FLAGS ${CMAKE_CXX_FLAGS} ${GCC_CXX_COVERAGE_COMPILE_FLAGS})
+
