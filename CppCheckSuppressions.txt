@@ -1,1 +1,2 @@
-*:/home/jameswu/projects/cmake-template/main.cpp
+# change this to your full path
+*:/home/jameswu/projects/cmake-template/third-party/*
