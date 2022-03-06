@@ -1,8 +1,8 @@
 cmake_minimum_required (VERSION 3.12)
 
 project (my_poject)
-set (UNIT_TEST_NAME "test_${PROJECT_NAME}")
-set (APP_NAME "app_${PROJECT_NAME}")
+set (UNIT_TEST_NAME "${PROJECT_NAME}_test")
+set (APP_NAME "${PROJECT_NAME}")
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED true)
@@ -38,15 +38,15 @@ if (CMAKE_CXX_CPPCHECK)
     )
 endif()
 
-# find_program(CMAKE_CXX_CLANG_TIDY NAMES clang-tidy)
-# if (CMAKE_CXX_CLANG_TIDY)
-#     list(
-#         APPEND CMAKE_CXX_CLANG_TIDY 
-#             "-header-filter=."
-#             "-checks=*"
-#             "-warnings-as-errors=*"
-#     )
-# endif()
+find_program(CMAKE_CXX_CLANG_TIDY NAMES clang-tidy)
+if (CMAKE_CXX_CLANG_TIDY)
+    list(
+        APPEND CMAKE_CXX_CLANG_TIDY 
+            "-header-filter=."
+            #"-checks=*"
+            "-warnings-as-errors=*"
+    )
+endif()
 
 #use in clang-tidy
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
