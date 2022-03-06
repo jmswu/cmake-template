@@ -4,7 +4,7 @@
 #include "add.hpp"
 #include "add.h"
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     // dummy code to get rid of unused parameter warning
     (void)argv;
