@@ -5,4 +5,4 @@ add_library(my_lib
     ${SRC_DIR}/add.cpp
 )
 
-target_include_directories(my_lib PUBLIC includes)
+target_include_directories(my_lib PUBLIC include)
