@@ -43,7 +43,6 @@ endif()
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
 add_subdirectory(my_lib)
-
 add_executable (${APP_NAME} main.cpp)
 target_link_libraries(${APP_NAME} my_lib)
 
