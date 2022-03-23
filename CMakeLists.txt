@@ -47,7 +47,6 @@ add_executable (${APP_NAME} main.cpp)
 target_link_libraries(${APP_NAME} my_lib)
 
 #add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
-
 #target_link_libraries (${UNIT_TEST_NAME} pthread gtest gtest_main)
 
 set (GCC_C_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Wno-misleading-indentation")
