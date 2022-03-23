@@ -11,8 +11,6 @@ set (TEST_SRC_FOLDER unit_test)
 set (TEST_SRC_FILES 
         "${TEST_SRC_FOLDER}/add_test.cpp"
         "${TEST_SRC_FOLDER}/another_test.cpp"
-        "${APP_SRC_FOLDER}/add.cpp"
-        "${APP_SRC_FOLDER}/add.c"
     )
 
 add_subdirectory (third-party/googletest)
@@ -46,8 +44,8 @@ add_subdirectory(my_lib)
 add_executable (${APP_NAME} main.cpp)
 target_link_libraries(${APP_NAME} my_lib)
 
-#add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
-#target_link_libraries (${UNIT_TEST_NAME} pthread gtest gtest_main)
+add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
+target_link_libraries (${UNIT_TEST_NAME} pthread gtest gtest_main my_lib)
 
 set (GCC_C_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Wno-misleading-indentation")
 set (GCC_CXX_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wundef -Wno-misleading-indentation")
