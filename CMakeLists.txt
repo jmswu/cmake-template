@@ -1,6 +1,6 @@
 cmake_minimum_required (VERSION 3.12)
 
-project (my_poject)
+project (my_project)
 set (UNIT_TEST_NAME "${PROJECT_NAME}_test")
 set (APP_NAME "${PROJECT_NAME}")
 
