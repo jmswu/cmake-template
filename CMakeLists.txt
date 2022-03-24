@@ -33,7 +33,7 @@ if (CMAKE_CXX_CLANG_TIDY)
         APPEND CMAKE_CXX_CLANG_TIDY 
             "-header-filter=."
             #"-checks=*"
-            "-warnings-as-errors=*"
+            #"-warnings-as-errors=*"
     )
 endif()
 

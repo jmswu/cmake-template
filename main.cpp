@@ -1,5 +1,6 @@
 #include <cstdio>
 #include <cstdlib>
+#include <iostream>
 
 #include "add.hpp"
 #include "add.h"
@@ -10,8 +11,8 @@ int main(int argc, char** argv)
     (void)argv;
     (void)argc;
 
-    std::printf("CXX code: 1 + 2 is %d\n\r", add(1, 2));        // CPP code
-    std::printf("C   code: 1 + 2 is %d\n\r", add_c_code(1, 2)); // C   code
+    std::cout<< "CXX code: 1 + 2 is " << add(1, 2) << std::endl;        // CPP code
+    std::cout<< "CXX code: 1 + 2 is " << add_c_code(1, 2) << std::endl; // C   code
 
     return EXIT_SUCCESS;
 }
