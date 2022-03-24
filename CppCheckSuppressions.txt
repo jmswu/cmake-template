@@ -1,2 +1,3 @@
 # change this to your full path
 *:/home/jameswu/projects/cmake-template/third-party/*
+*:/home/jameswu/projects/cmake-template/unit_test/*
