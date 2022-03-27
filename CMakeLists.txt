@@ -1,8 +1,6 @@
 cmake_minimum_required (VERSION 3.12)
 
 project (my_project)
-set (UNIT_TEST_NAME "${PROJECT_NAME}_test")
-set (APP_NAME "${PROJECT_NAME}")
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED true)
@@ -43,12 +41,11 @@ set (TEST_SRC_FILES
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
 add_subdirectory(my_lib)
-add_executable (${APP_NAME} main.cpp)
-target_link_libraries(${APP_NAME} my_lib)
+add_executable (${PROJECT_NAME} main.cpp)
+target_link_libraries(${PROJECT_NAME} my_lib)
 
-
-add_executable (${UNIT_TEST_NAME} ${TEST_SRC_FILES})
-target_link_libraries (${UNIT_TEST_NAME} PRIVATE my_lib ${CONAN_LIBS})
+add_executable (unit_test ${TEST_SRC_FILES})
+target_link_libraries (unit_test PRIVATE my_lib ${CONAN_LIBS})
 
 # set (GCC_C_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Wno-misleading-indentation")
 # set (GCC_CXX_COVERAGE_COMPILE_FLAGS "-Os -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wundef -Wno-misleading-indentation")
