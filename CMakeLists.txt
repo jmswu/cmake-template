@@ -14,6 +14,8 @@ set (TEST_SRC_FILES
         "${TEST_SRC_FOLDER}/another_test.cpp"
     )
 
+# uncomment these block to use cppcheck
+
 # find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
 # if (CMAKE_CXX_CPPCHECK)
 #     list(
@@ -25,6 +27,8 @@ set (TEST_SRC_FILES
 #             "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
 #     )
 # endif()
+
+# move the clang-tidy config to .clang-tidy file on the working folder
 
 # find_program(CMAKE_CXX_CLANG_TIDY NAMES clang-tidy)
 # if (CMAKE_CXX_CLANG_TIDY)
@@ -47,6 +51,8 @@ add_executable (unit_test ${TEST_SRC_FILES})
 target_link_libraries (unit_test PRIVATE my_lib ${CONAN_LIBS})
 include(GoogleTest)
 gtest_discover_tests(unit_test)
+
+# legacy stuff, keeping as records for now, these will be removed in time
 
 # set (GCC_C_COVERAGE_COMPILE_FLAGS -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wstrict-prototypes -Wundef -Wold-style-definition -Wno-misleading-indentation)
 # set (GCC_CXX_COVERAGE_COMPILE_FLAGS -Werror -Wall -Wextra -Wpointer-arith -Wcast-align -Wwrite-strings -Wswitch-default -Wunreachable-code -Winit-self -Wmissing-field-initializers -Wno-unknown-pragmas -Wundef -Wno-misleading-indentation)
