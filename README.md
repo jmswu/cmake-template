@@ -1,9 +1,24 @@
-# cmake-template
+# CMAKE-TEMPLATE #
+### Introduction ###
+* cmake template for using GTest
+* With cppcheck support
+* With clang-tidy support
 
-cmake template for using GTest
-- With cppcheck support
+### Depandancies ###
+* conan
+* clang-tidy
 
-- step 1: clone this repo with `git clone --recursive https://github.com/jmswu/cmake-template.git`
-- step 2: put test source files in [src] folder and header in [includes] folder
-- step 3: change `CppCheckSuppressions.txt` path to your path
-- step 4: run cmake and make.
+### Installation ###
+* clone this repo with `git clone https://github.com/jmswu/cmake-template.git`
+* put test source files in `my_lib` folder
+* change `CppCheckSuppressions.txt` path to your path (optional)
+
+### Build ###
+* run `mkdir build && cd build`
+* run `conan install ..`
+* run `cmake ..`
+* run `make
+
+### Run tests ###
+* run `cd build`
+* run `ctest`
