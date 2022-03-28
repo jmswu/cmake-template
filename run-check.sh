@@ -1,6 +1,6 @@
 #/usr/bin/sh
 
-cd ..
+pushd ..
 run-clang-tidy-13 -p=build
 
 
