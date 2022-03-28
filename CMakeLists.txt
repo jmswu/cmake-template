@@ -14,19 +14,22 @@ set (TEST_SRC_FILES
         "${TEST_SRC_FOLDER}/another_test.cpp"
     )
 
-# uncomment these block to use cppcheck
+if (USE_CPPCHECK)
 
-# find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
-# if (CMAKE_CXX_CPPCHECK)
-#     list(
-#         APPEND CMAKE_CXX_CPPCHECK 
-#             "--enable=warning"
-#             "--inconclusive"
-#             "--force" 
-#             "--inline-suppr"
-#             "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
-#     )
-# endif()
+    message(STATUS "CPPCHECK enable")
+
+    find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
+    if (CMAKE_CXX_CPPCHECK)
+        list(
+            APPEND CMAKE_CXX_CPPCHECK 
+                "--enable=warning"
+                "--inconclusive"
+                "--force" 
+                "--inline-suppr"
+                "--suppressions-list=${CMAKE_SOURCE_DIR}/CppCheckSuppressions.txt"
+        )
+    endif()
+endif()
 
 # move the clang-tidy config to .clang-tidy file on the working folder
 
