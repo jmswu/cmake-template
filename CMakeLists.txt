@@ -4,6 +4,7 @@ project (my_project)
 
 set (CMAKE_CXX_STANDARD 17)
 set (CMAKE_CXX_STANDARD_REQUIRED true)
+set (CMAKE_EXPORT_COMPILE_COMMANDS true)
 
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 conan_basic_setup()
@@ -14,12 +15,11 @@ set (TEST_SRC_FILES
         "${TEST_SRC_FOLDER}/another_test.cpp"
     )
 
+# cppcheck
 if (USE_CPPCHECK)
-
-    message(STATUS "CPPCHECK enable")
-
     find_program(CMAKE_CXX_CPPCHECK NAMES cppcheck)
     if (CMAKE_CXX_CPPCHECK)
+        message(STATUS "CPPCHECK enable")
         list(
             APPEND CMAKE_CXX_CPPCHECK 
                 "--enable=warning"
@@ -42,8 +42,6 @@ endif()
 #             #"-warnings-as-errors=*"
 #     )
 # endif()
-
-set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
 add_subdirectory(my_lib)
 add_executable (${PROJECT_NAME} main.cpp)
