@@ -1,6 +1,6 @@
 # CMAKE-TEMPLATE #
 ### Introduction ###
-* cmake template for using GTest
+* Cmake template for using GTest
 * With cppcheck support
 * With clang-tidy support
 
@@ -17,7 +17,7 @@
 * run `mkdir build && cd build`
 * run `conan install ..`
 * run `cmake ..`
-* run `make
+* run `make`
 
 ### Run tests ###
 * run `cd build`
