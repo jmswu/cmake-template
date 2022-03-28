@@ -9,6 +9,11 @@
 * [conan](https://conan.io/)
 * [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
 
+### Install depandancies ###
+* Run `sudo apt install clang-tidy` to install clant-tidy
+* Run `pip install conan` to installl conan
+* Run `conan profile update settings.compiler.libcxx=libstdc++11 default` to use libcxx++11 if required. [reference](https://github.com/conan-io/conan/issues/2658)
+
 ### Installation ###
 * Clone this repo with `git clone https://github.com/jmswu/cmake-template.git`
 * Put test source files in `my_lib` folder
@@ -16,12 +21,16 @@
 * Edit `.clang-tidy` for the checks you use
 
 ### Build ###
-* run `mkdir build && cd build`
-* run `conan install ..` to install c/c++ library
-* run `cmake ..`
-* run `make`
+* Run `mkdir build && cd build`
+* Run `conan install ..` to install c/c++ library
+* Run `cmake ..`
+* Run `make`
 
 ### Run tests ###
-* run `cd build`
-* run `ctest`
+* Run `cd build`
+* Run `ctest`
+
+### Run checks ###
+* Run `cd build` # must run under build folder
+* Run `../run-check.sh`
 
