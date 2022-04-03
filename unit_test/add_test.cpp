@@ -42,10 +42,16 @@ namespace
     }
 
     // testing C code with fake function
-    TEST_F(AddTest, test_fakeFUnctionReturnValue)
+    TEST_F(AddTest, test_fakeFUnctionReturnValue_T1)
     {
-        cb_operation_fake.return_val = 1;
-        ASSERT_EQ(1, cb_operation(1, 1));
-        ASSERT_TRUE(true);
+        cb_operation_fake.return_val = 2;
+        ASSERT_EQ(2, cb_operation(1, 1));
+    }
+
+    // testing C code with fake function 
+    TEST_F(AddTest, test_fakeFUnctionReturnValue_T2)
+    {
+        cb_operation_fake.return_val = 2;
+        ASSERT_EQ(2, add_with_cb(1, 1, cb_operation));
     }
 }
