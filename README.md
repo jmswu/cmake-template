@@ -4,6 +4,7 @@
 * With cppcheck support (optional)
 * With clang-tidy support (optional)
 * With conan c/c++ package manager
+* With Fake Function Framework (FFF)
 
 ### Depandancies ###
 * [conan](https://conan.io/)
@@ -15,7 +16,7 @@
 * Run `conan profile update settings.compiler.libcxx=libstdc++11 default` to use libcxx++11 if required. [reference](https://github.com/conan-io/conan/issues/2658)
 
 ### Installation ###
-* Clone this repo with `git clone https://github.com/jmswu/cmake-template.git`
+* Clone this repo with `git clone --recurse-submodules https://github.com/jmswu/cmake-template.git`
 * Put test source files in `my_lib` folder
 * Change `CppCheckSuppressions.txt` path to your path (optional, if using cppcheck)
 * Edit `.clang-tidy` for the checks you use
@@ -28,9 +29,9 @@
 
 ### Run tests ###
 * Run `cd build`
-* Run `ctest`
+* Run `ctest` or `./bin/unit_test`
 
 ### Run checks ###
 * Run `cd build` # must run under build folder
-* Run `../run-check.sh`
+* Run `../run-check.sh` or `../run-check.sh | grep file_name`
 
