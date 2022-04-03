@@ -1,3 +1,6 @@
 [submodule "third-party/fff"]
 	path = third-party/fff
 	url = https://github.com/meekrosoft/fff.git
+[submodule "thrid-party/fff"]
+	path = thrid-party/fff
+	url = https://github.com/meekrosoft/fff.git
